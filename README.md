@@ -31,6 +31,11 @@ If you found this Implementation helpful or used it in your Projects, do give it
 
 ## Brief Overview
 
+## Prerequisites
+- Visual Studio 2019 Community and above
+- .NET Core 3.1 SDK and above
+- Basic Understanding of Architectures and Clean Code Principles
+
 ## Getting Started
 
 ## Changelog

@@ -26,4 +26,8 @@
     <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="5.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\v1\" />
+  </ItemGroup>
+
 </Project>
