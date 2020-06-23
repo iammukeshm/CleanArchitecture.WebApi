@@ -8,15 +8,17 @@ If you found this Implementation helpful or used it in your Projects, do give it
 ## Proposed Technologies and Features
 - ASP.NET Core 3.1 WebApi
 - .NET Core 3.1 / Standard 2.1 Libraries
+- Onion Architecture
 - CQRS with MediatR Library
 - Entity Framework Core - Code First
-- MediatR Pipeline Logging
+- MediatR Pipeline Logging - Securing Sensitive Data
 - Serilog
 - Swagger UI
 - Response Wrappers
 - Healthchecks
 - Pagination
-- Caching
+- Redis Caching
+- In-Memory Database
 - Microsoft Identity with JWT Authentication
 - Role based Authorization
 - Database Seeding
@@ -24,6 +26,8 @@ If you found this Implementation helpful or used it in your Projects, do give it
 - API Versioning
 - Fluent Validation
 - Automapper
+- SMPT / Mailkit / Sendgrid Email Service
+- Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
 
 ## Brief Overview
 
