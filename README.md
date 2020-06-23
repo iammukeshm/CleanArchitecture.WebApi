@@ -30,6 +30,7 @@ If you found this Implementation helpful or used it in your Projects, do give it
 - Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
 
 ## Brief Overview
+![alt text](https://www.codewithmukesh.com/wp-content/uploads/2020/06/Onion-Architecture-In-ASP.NET-Core.png)
 
 ## Prerequisites
 - Visual Studio 2019 Community and above
@@ -42,7 +43,7 @@ If you found this Implementation helpful or used it in your Projects, do give it
 Every changes / additions / deletions will be recorded in the [Changelog file](https://github.com/iammukeshm/CleanArchitecture.WebApi/blob/master/CHANGELOG.md).
 
 ## Support
-Having any issues or troubles getting started? [Get in touch with me](https://www.codewithmukesh.com/contact) or [raise an issue / bug / feature request](https://github.com/iammukeshm/CleanArchitecture.WebApi/issues/new/choose). Always happy to help.
+Having any issues or troubles getting started? [Get in touch with me](https://www.codewithmukesh.com/contact) or [Raise a Bug or Feature Request](https://github.com/iammukeshm/CleanArchitecture.WebApi/issues/new/choose). Always happy to help.
 
 ## Licensing
 iammukeshm/CleanArchitecture.WebApi Project is licensed with the [MIT License](https://github.com/iammukeshm/CleanArchitecture.WebApi/blob/master/LICENSE).
