@@ -24,3 +24,17 @@ If you found this Implementation helpful or used it in your Projects, do give it
 - API Versioning
 - Fluent Validation
 - Automapper
+
+## Brief Overview
+
+## Getting Started
+
+## Release Notes / Changelog
+
+### Version 1.0
+- added Swagger UI with Meta
+- added API Versioning
+- added Meta Controller
+- and more.
+
+## Licensing
