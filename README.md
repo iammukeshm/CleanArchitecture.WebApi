@@ -1,5 +1,5 @@
 # Clean Architecture with ASP.NET Core 3.1 WebApi
-### Coming Soon! 
+### Coming Soon! Work under Progress.
 An Implementation of Clean Architecture with ASP.NET Core 3.1 WebApi
 
 ## Give a Star!
@@ -29,12 +29,11 @@ If you found this Implementation helpful or used it in your Projects, do give it
 
 ## Getting Started
 
-## Release Notes / Changelog
+## Changelog
+Every changes / additions / deletions will be recorded in the [Changelog file](https://github.com/iammukeshm/CleanArchitecture.WebApi/blob/master/CHANGELOG.md).
 
-### Version 1.0
-- added Swagger UI with Meta
-- added API Versioning
-- added Meta Controller
-- and more.
+## Support
+Having any issues or troubles getting started? [Get in touch with me](https://www.codewithmukesh.com/contact) or [raise an issue / bug / feature request] (https://github.com/iammukeshm/CleanArchitecture.WebApi/issues/new/choose). Always happy to help.
 
 ## Licensing
+iammukeshm/CleanArchitecture.WebApi Project is licensed with the MIT License.
