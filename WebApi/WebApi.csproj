@@ -9,5 +9,13 @@
     <PackageProjectUrl>https://www.codewithmukesh.com/blog/aspnet-core-webapi-clean-architecture/</PackageProjectUrl>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>CleanArchitecture.WebApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.3.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.3.3" />
+  </ItemGroup>
 
 </Project>
