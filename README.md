@@ -2,11 +2,14 @@
 ### Coming Soon. Work under Progress.
 An Implementation of Clean Architecture with ASP.NET Core 3.1 WebApi
 
-## Give a Star!
+Check out my [blog](https://www.codewithmukesh.com) or say [Hi on Twitter!](https://twitter.com/codewithmukesh)
+
+## Give a Star ⭐️
 If you found this Implementation helpful or used it in your Projects, do give it a star. Thanks!
 
 ## Proposed Technologies and Features
 - ASP.NET Core 3.1 WebApi
+- REST Standards
 - .NET Core 3.1 / Standard 2.1 Libraries
 - Onion Architecture
 - CQRS with MediatR Library
@@ -28,6 +31,7 @@ If you found this Implementation helpful or used it in your Projects, do give it
 - Automapper
 - SMPT / Mailkit / Sendgrid Email Service
 - Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
+- File Upload & Manage Endpoint
 
 ## Brief Overview
 ![alt text](https://www.codewithmukesh.com/wp-content/uploads/2020/06/Onion-Architecture-In-ASP.NET-Core.png)
@@ -42,8 +46,14 @@ If you found this Implementation helpful or used it in your Projects, do give it
 ## Changelog
 Every changes / additions / deletions will be recorded in the [Changelog file](https://github.com/iammukeshm/CleanArchitecture.WebApi/blob/master/CHANGELOG.md).
 
-## Support
+## Questions? Bugs? Suggestions for Improvement?
 Having any issues or troubles getting started? [Get in touch with me](https://www.codewithmukesh.com/contact) or [Raise a Bug or Feature Request](https://github.com/iammukeshm/CleanArchitecture.WebApi/issues/new/choose). Always happy to help.
+
+## Support
+Has this Project helped you learn something New? or Helped you at work? Do Consider Supporting.
+
+<a href="https://www.buymeacoffee.com/codewithmukesh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" width="200"  ></a>
+
 
 ## Licensing
 iammukeshm/CleanArchitecture.WebApi Project is licensed with the [MIT License](https://github.com/iammukeshm/CleanArchitecture.WebApi/blob/master/LICENSE).
