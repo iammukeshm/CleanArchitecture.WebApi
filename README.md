@@ -11,6 +11,7 @@ If you found this Implementation helpful or used it in your Projects, do give it
 - Onion Architecture
 - CQRS with MediatR Library
 - Entity Framework Core - Code First
+- Repository Pattern - Generic
 - MediatR Pipeline Logging - Securing Sensitive Data
 - Serilog
 - Swagger UI

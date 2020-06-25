@@ -5,10 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\" />
     <Folder Include="Behaviours\" />
-    <Folder Include="Interfaces\" />
+    <Folder Include="Features\Identity\" />
+    <Folder Include="Features\Products\" />
     <Folder Include="Mappings\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
 </Project>
