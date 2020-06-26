@@ -7,11 +7,12 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - setup folder structure
-- added Swagger UI with Meta
+- added Swagger UI
 - added API Versioning
 - added Meta Controller
 - added base API Controller
 - added Generic Repostiory with Interface / Implementation
+- added response and paged response wrapper classes
 - and more.
 
 ### Changed
