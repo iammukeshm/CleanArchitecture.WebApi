@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - added base API Controller
 - added Generic Repostiory with Interface / Implementation
 - added response and paged response wrapper classes
+- added identity context and seperate connection string for Identity
 - and more.
 
 ### Changed
