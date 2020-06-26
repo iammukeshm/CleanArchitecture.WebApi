@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 - added Generic Repostiory with Interface / Implementation
 - added response and paged response wrapper classes
 - added identity context and seperate connection string for Identity
+- custom schema and names for Identity Table
 - and more.
 
 ### Changed
