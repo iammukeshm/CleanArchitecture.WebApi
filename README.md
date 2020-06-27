@@ -1,11 +1,18 @@
 # Clean Architecture with ASP.NET Core 3.1 WebApi
 ### Coming Soon. Work under Progress.
-An Implementation of Clean Architecture with ASP.NET Core 3.1 WebApi
+An Implementation of Clean Architecture with ASP.NET Core 3.1 WebApi.
 
 Check out my [blog](https://www.codewithmukesh.com) or say [Hi on Twitter!](https://twitter.com/codewithmukesh)
 
 ## Give a Star ⭐️
 If you found this Implementation helpful or used it in your Projects, do give it a star. Thanks!
+
+## Purpose of this Repository
+The primary goal is to create a Full-Fledged implementation, that is well documented along with the steps taken to build this Solution from Scratch. I also intend to make this Solution available as a Solution Template within Visual Studio 2019 (by installing the required Nuget Package).
+- Demonstrate Clean Monolith Architecture in ASP.NET Core 3.1 
+- This is not a Proof of Concept
+- Implementation that is ready for Production
+- Integrate the most essential libraries and packages
 
 ## Proposed Technologies and Features
 - ASP.NET Core 3.1 WebApi
@@ -55,6 +62,9 @@ Has this Project helped you learn something New? or Helped you at work? Do Consi
 
 <a href="https://www.buymeacoffee.com/codewithmukesh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" width="200"  ></a>
 
+## Share it!
+I have personally not come across an clean implementation on a WebAPI. which is the reason that i started building this up. There are quite a lot of improvements and fixes along the way from the day I started out. Thanks to the community for the support and suggestions.
+Please share this Repository within your developer community, if you think that this would a difference! Thanks.
 
 ## Licensing
 iammukeshm/CleanArchitecture.WebApi Project is licensed with the [MIT License](https://github.com/iammukeshm/CleanArchitecture.WebApi/blob/master/LICENSE).

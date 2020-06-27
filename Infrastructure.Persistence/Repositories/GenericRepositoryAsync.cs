@@ -10,7 +10,7 @@ namespace Infrastructure.Persistence.Repository
 {
     public class GenericRepositoryAsync<T> : IGenericRepositoryAsync<T> where T : class
     {
-        protected readonly ApplicationDbContext _dbContext;
+        private readonly ApplicationDbContext _dbContext;
 
         public GenericRepositoryAsync(ApplicationDbContext dbContext)
         {
