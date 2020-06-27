@@ -15,31 +15,31 @@ The primary goal is to create a Full-Fledged implementation, that is well docume
 - Integrate the most essential libraries and packages
 
 ## Proposed Technologies and Features
-- ASP.NET Core 3.1 WebApi
-- REST Standards
-- .NET Core 3.1 / Standard 2.1 Libraries
-- Onion Architecture
-- CQRS with MediatR Library
-- Entity Framework Core - Code First
-- Repository Pattern - Generic
-- MediatR Pipeline Logging - Securing Sensitive Data
-- Serilog
-- Swagger UI
-- Response Wrappers
-- Healthchecks
-- Pagination
-- Redis Caching
-- In-Memory Database
-- Microsoft Identity with JWT Authentication
-- Role based Authorization
-- Database Seeding
-- Custom Exception Handling Middlewares
-- API Versioning
-- Fluent Validation
-- Automapper
-- SMPT / Mailkit / Sendgrid Email Service
-- Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
-- File Upload & Manage Endpoint
+- [x] ASP.NET Core 3.1 WebApi
+- [x] REST Standards
+- [x] .NET Core 3.1 / Standard 2.1 Libraries
+- [x] Onion Architecture
+- [x] CQRS with MediatR Library
+- [x] Entity Framework Core - Code First
+- [x] Repository Pattern - Generic
+- [ ] MediatR Pipeline Logging - Securing Sensitive Data
+- [x] Serilog
+- [x] Swagger UI
+- [x] Response Wrappers
+- [ ] Healthchecks
+- [ ] Pagination
+- [ ] Redis Caching
+- [ ] In-Memory Database
+- [ ] Microsoft Identity with JWT Authentication
+- [ ] Role based Authorization
+- [ ] Database Seeding
+- [ ] Custom Exception Handling Middlewares
+- [x] API Versioning
+- [ ] Fluent Validation
+- [x] Automapper
+- [ ] SMPT / Mailkit / Sendgrid Email Service
+- [ ] Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
+- [ ] File Upload & Manage Endpoint
 
 ## Brief Overview
 ![alt text](https://www.codewithmukesh.com/wp-content/uploads/2020/06/Onion-Architecture-In-ASP.NET-Core.png)
