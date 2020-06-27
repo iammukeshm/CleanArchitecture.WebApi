@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - added automapper with general profile
 - added endpoints and handlers for product /getall and /post
 - added pagination filters and implemented pagination for GetAll Method of Generic Repository
+- added fluent validations
 - and more.
 
 ### Changed

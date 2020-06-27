@@ -36,7 +36,7 @@ The primary goal is to create a Full-Fledged implementation, that is well docume
 - [ ] Database Seeding
 - [ ] Custom Exception Handling Middlewares
 - [x] API Versioning
-- [ ] Fluent Validation
+- [x] Fluent Validation
 - [x] Automapper
 - [ ] SMPT / Mailkit / Sendgrid Email Service
 - [ ] Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)

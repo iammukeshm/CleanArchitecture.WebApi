@@ -2,7 +2,7 @@
 
 namespace Infrastructure.Persistence.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Updates : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,10 +12,10 @@ namespace Infrastructure.Persistence.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: true),
-                    Barcode = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(maxLength: 50, nullable: false),
+                    Barcode = table.Column<string>(maxLength: 50, nullable: false),
                     Description = table.Column<string>(nullable: true),
-                    Rate = table.Column<decimal>(nullable: false)
+                    Rate = table.Column<decimal>(type: "decimal(18,6)", nullable: false)
                 },
                 constraints: table =>
                 {

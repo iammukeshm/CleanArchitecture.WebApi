@@ -29,7 +29,7 @@ namespace Application.Features.Products.Queries.GetAllProducts
         public async Task<PagedResponse<IEnumerable<GetAllProductsViewModel>>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
         {
             var validFilter = _mapper.Map<GetAllProductsFilter>(request);
-            var product = await _productRepository.GetAllAsync(validFilter.PageNumber,validFilter.PageSize);
+            var product = await _productRepository.GetPagedReponseAsync(validFilter.PageNumber,validFilter.PageSize);
             var productViewModel = _mapper.Map<IEnumerable<GetAllProductsViewModel>>(product);
             return new PagedResponse<IEnumerable<GetAllProductsViewModel>>(productViewModel, validFilter.PageNumber, validFilter.PageSize);           
         }

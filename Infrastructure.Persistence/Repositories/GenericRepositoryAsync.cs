@@ -23,7 +23,7 @@ namespace Infrastructure.Persistence.Repository
             return await _dbContext.Set<T>().FindAsync(id);
         }
 
-        public async Task<IReadOnlyList<T>> GetAllAsync(int pageNumber, int pageSize)
+        public async Task<IReadOnlyList<T>> GetPagedReponseAsync(int pageNumber, int pageSize)
         {
             return await _dbContext
                 .Set<T>()
@@ -50,6 +50,13 @@ namespace Infrastructure.Persistence.Repository
         {
             _dbContext.Set<T>().Remove(entity);
             await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task<IReadOnlyList<T>> GetAllAsync()
+        {
+            return await _dbContext
+                 .Set<T>()
+                 .ToListAsync();
         }
     }
 }
