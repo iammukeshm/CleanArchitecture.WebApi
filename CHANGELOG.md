@@ -15,6 +15,8 @@ All notable changes to this project will be documented in this file.
 - added response and paged response wrapper classes
 - added identity context and seperate connection string for Identity
 - custom schema and names for Identity Table
+- added automapper with general profile
+- added endpoints and handlers for product /getall and /post
 - and more.
 
 ### Changed
