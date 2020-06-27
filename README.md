@@ -68,10 +68,11 @@ Please share this Repository within your developer community, if you think that 
 
 ## About the Author
 ### Mukesh Murugan
-Blogs @ [codewithmukesh.com](https://www.codewithmukesh.com)
-Facebook Page - [codewithmukesh](https://www.facebook.com/codewithmukesh)
-Twitter Page - [codewithmukesh](https://www.twitter.com/codewithmukesh)
-Linkedin - [Mukesh Murugan](https://www.linkedin.com/in/iammukeshm/)
+- Blogs at [codewithmukesh.com](https://www.codewithmukesh.com)
+- Facebook - [codewithmukesh](https://www.facebook.com/codewithmukesh)
+- Twitter - [Mukesh Murugan](https://www.twitter.com/iammukeshm)
+- Twitter - [codewithmukesh](https://www.twitter.com/codewithmukesh)
+- Linkedin - [Mukesh Murugan](https://www.linkedin.com/in/iammukeshm/)
 
 ## Licensing
 iammukeshm/CleanArchitecture.WebApi Project is licensed with the [MIT License](https://github.com/iammukeshm/CleanArchitecture.WebApi/blob/master/LICENSE).
