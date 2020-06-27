@@ -27,11 +27,12 @@ The primary goal is to create a Full-Fledged implementation, that is well docume
 - [x] Swagger UI
 - [x] Response Wrappers
 - [ ] Healthchecks
-- [ ] Pagination
+- [x] Pagination
 - [ ] Redis Caching
 - [ ] In-Memory Database
 - [ ] Microsoft Identity with JWT Authentication
 - [ ] Role based Authorization
+- [ ] Identity Seeding
 - [ ] Database Seeding
 - [ ] Custom Exception Handling Middlewares
 - [x] API Versioning

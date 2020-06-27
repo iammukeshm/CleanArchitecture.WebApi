@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Application.Features.Products.Commands;
 using Application.Features.Products.Commands.CreateProduct;
 using Application.Features.Products.Queries.GetAllProducts;
+using Application.Filters;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -16,9 +17,9 @@ namespace WebApi.Controllers.v1
     {
         // GET: api/<controller>
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery] GetAllProductsFilter filter)
         {
-            return Ok(await Mediator.Send(new GetAllProductsQuery()));
+            return Ok(await Mediator.Send(new GetAllProductsQuery() { PageSize = filter.PageSize, PageNumber = filter.PageNumber  }));
         }
 
         // GET api/<controller>/5

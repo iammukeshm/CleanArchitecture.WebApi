@@ -1,4 +1,5 @@
-﻿using Application.Interfaces.Repositories;
+﻿using Application.Filters;
+using Application.Interfaces.Repositories;
 using Application.Wrappers;
 using AutoMapper;
 using MediatR;
@@ -12,6 +13,8 @@ namespace Application.Features.Products.Queries.GetAllProducts
 {
     public class GetAllProductsQuery : IRequest<PagedResponse<IEnumerable<GetAllProductsViewModel>>>
     {
+        public int PageNumber { get; set; }
+        public int PageSize { get; set; }
     }
     public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, PagedResponse<IEnumerable<GetAllProductsViewModel>>>
     {
@@ -25,11 +28,10 @@ namespace Application.Features.Products.Queries.GetAllProducts
 
         public async Task<PagedResponse<IEnumerable<GetAllProductsViewModel>>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
         {
-            //TODO - Use Automapper
-            //TODO - Add Pagination
-            var product = await _productRepository.ListAllAsync();
+            var validFilter = _mapper.Map<GetAllProductsFilter>(request);
+            var product = await _productRepository.GetAllAsync(validFilter.PageNumber,validFilter.PageSize);
             var productViewModel = _mapper.Map<IEnumerable<GetAllProductsViewModel>>(product);
-            return new PagedResponse<IEnumerable<GetAllProductsViewModel>>(productViewModel,0,0);           
+            return new PagedResponse<IEnumerable<GetAllProductsViewModel>>(productViewModel, validFilter.PageNumber, validFilter.PageSize);           
         }
     }
 }

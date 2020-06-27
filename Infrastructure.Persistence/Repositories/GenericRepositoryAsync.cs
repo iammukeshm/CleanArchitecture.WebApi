@@ -3,6 +3,7 @@ using Infrastructure.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,9 +23,14 @@ namespace Infrastructure.Persistence.Repository
             return await _dbContext.Set<T>().FindAsync(id);
         }
 
-        public async Task<IReadOnlyList<T>> ListAllAsync()
+        public async Task<IReadOnlyList<T>> GetAllAsync(int pageNumber, int pageSize)
         {
-            return await _dbContext.Set<T>().ToListAsync();
+            return await _dbContext
+                .Set<T>()
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .AsNoTracking()
+                .ToListAsync();
         }
 
         public async Task<T> AddAsync(T entity)
