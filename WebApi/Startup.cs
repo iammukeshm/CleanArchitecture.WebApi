@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Infrastructure.Identity;
+using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +30,7 @@ namespace WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddIdentityInfrastructure(_config);
+            services.AddPersistenceInfrastructure(_config);
             services.AddControllers();
             #region Swagger
             services.AddSwaggerGen(c =>

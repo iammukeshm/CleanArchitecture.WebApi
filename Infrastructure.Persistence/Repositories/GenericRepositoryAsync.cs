@@ -31,7 +31,6 @@ namespace Infrastructure.Persistence.Repository
         {
             await _dbContext.Set<T>().AddAsync(entity);
             await _dbContext.SaveChangesAsync();
-
             return entity;
         }
 
