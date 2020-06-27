@@ -16,10 +16,10 @@ namespace Application.Wrappers
             Errors = null;
             Data = data;
         }
-        public T Data { get; set; }
         public bool Succeeded { get; set; }
 
         public string[] Errors { get; set; }
         public string Message { get; set; }
+        public T Data { get; set; }
     }
 }

@@ -7,8 +7,6 @@
   <ItemGroup>
     <Folder Include="Behaviours\" />
     <Folder Include="Features\Identity\" />
-    <Folder Include="Features\Products\Queries\" />
-    <Folder Include="Mappings\" />
   </ItemGroup>
 
     <ItemGroup>
