@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Application.Features.Products.Queries.GetAllProducts
 {
-    public class GetAllProductsFilter : PaginationFilter
+    public class GetAllProductsParameter : RequestParameter
     {
 
     }

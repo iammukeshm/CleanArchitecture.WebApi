@@ -10,7 +10,7 @@ namespace Infrastructure.Persistence.Contexts
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        protected ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
         public DbSet<Product> Products { get; set; }
@@ -24,7 +24,6 @@ namespace Infrastructure.Persistence.Contexts
             {
                 property.SetColumnType("decimal(18,6)");
             }
-            
             base.OnModelCreating(builder);
         }
     }

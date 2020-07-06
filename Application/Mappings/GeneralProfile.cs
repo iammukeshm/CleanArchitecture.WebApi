@@ -14,7 +14,7 @@ namespace Application.Mappings
         {
             CreateMap<Product, GetAllProductsViewModel>().ReverseMap();
             CreateMap<CreateProductCommand, Product>();
-            CreateMap<GetAllProductsQuery, GetAllProductsFilter>();
+            CreateMap<GetAllProductsQuery, GetAllProductsParameter>();
         }
     }
 }
