@@ -41,6 +41,7 @@ The primary goal is to create a Full-Fledged implementation, that is well docume
 - [ ] SMPT / Mailkit / Sendgrid Email Service
 - [ ] Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
 - [ ] File Upload & Manage Endpoint
+- [ ] Localization with Resources / MultiLingual Support
 
 ## Brief Overview
 ![alt text](https://www.codewithmukesh.com/wp-content/uploads/2020/06/Onion-Architecture-In-ASP.NET-Core.png)
