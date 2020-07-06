@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Linq;
+using WebApi.Middlewares;
 
 namespace WebApi
 {
@@ -99,6 +100,8 @@ namespace WebApi
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "CleanArchitecture.WebApi");
             });
             #endregion
+            // global error handler
+            app.UseMiddleware<ErrorHandlerMiddleware>();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

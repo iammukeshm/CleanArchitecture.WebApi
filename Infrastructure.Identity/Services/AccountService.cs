@@ -1,4 +1,5 @@
 ﻿using Application.DTOs.Account;
+using Application.Exceptions;
 using Application.Interfaces;
 using Application.Wrappers;
 using Infrastructure.Identity.Models;
@@ -25,7 +26,7 @@ namespace Infrastructure.Identity.Services
             var user = await _userManager.FindByEmailAsync(request.Email);
             if (user == null)
             {
-                throw new Exception($"No Accounts Registered with {request.Email}.");
+                throw new ApiException($"No Accounts Registered with {request.Email}.");
             }
             throw new NotImplementedException();
         }

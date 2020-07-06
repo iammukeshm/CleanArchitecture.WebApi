@@ -16,6 +16,7 @@ namespace Application.Wrappers
             this.Data = data;
             this.Message = null;
             this.Succeeded = true;
+            this.Errors = null;
         }
     }
 }

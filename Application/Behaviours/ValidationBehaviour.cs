@@ -1,9 +1,10 @@
-﻿using FluentValidation;
+﻿
+using Application.Exceptions;
+using FluentValidation;
 using MediatR;
-using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -23,13 +24,13 @@ namespace Application.Behaviours
         {
             if (_validators.Any())
             {
-                var context = new ValidationContext(request);
+                var context = new FluentValidation.ValidationContext(request);
 
                 var validationResults = await Task.WhenAll(_validators.Select(v => v.ValidateAsync(context, cancellationToken)));
                 var failures = validationResults.SelectMany(r => r.Errors).Where(f => f != null).ToList();
 
                 if (failures.Count != 0)
-                    throw new ValidationException(failures);
+                    throw new Exceptions.ValidationException(failures);
             }
             return await next();
         }
