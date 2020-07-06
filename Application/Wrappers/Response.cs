@@ -9,16 +9,13 @@ namespace Application.Wrappers
         public Response()
         {
         }
-        public Response(T data)
+        internal Response(T data)
         {
             Succeeded = true;
             Message = string.Empty;
-            Errors = null;
             Data = data;
         }
         public bool Succeeded { get; set; }
-
-        public List<string> Errors { get; set; }
         public string Message { get; set; }
         public T Data { get; set; }
     }

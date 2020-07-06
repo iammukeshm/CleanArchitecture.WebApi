@@ -1,10 +1,11 @@
-﻿using Infrastructure.Identity.Contexts;
+﻿using Application.Interfaces;
+using Infrastructure.Identity.Contexts;
+using Infrastructure.Identity.Models;
+using Infrastructure.Identity.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Infrastructure.Identity
 {
@@ -16,6 +17,10 @@ namespace Infrastructure.Identity
                 options.UseSqlServer(
                     configuration.GetConnectionString("IdentityConnection"),
                     b => b.MigrationsAssembly(typeof(IdentityContext).Assembly.FullName)));
+            services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
+            #region Services
+            services.AddTransient<IAccountService, AccountService>();
+            #endregion
         }
     }
 }

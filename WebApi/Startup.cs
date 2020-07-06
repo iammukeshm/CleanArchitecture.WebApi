@@ -1,5 +1,4 @@
 using Application;
-using Application.Features.Products.Commands.CreateProduct;
 using Application.Wrappers;
 using FluentValidation.AspNetCore;
 using Infrastructure.Identity;
@@ -7,14 +6,12 @@ using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Linq;
-using WebApi.Filters;
 
 namespace WebApi
 {
@@ -32,22 +29,7 @@ namespace WebApi
             services.AddApplicationLayer();
             services.AddIdentityInfrastructure(_config);
             services.AddPersistenceInfrastructure(_config);
-            services.AddControllers().AddFluentValidation();
-            services.Configure<ApiBehaviorOptions>(options =>
-            {
-                options.InvalidModelStateResponseFactory = c =>
-                {
-                    var errors = c.ModelState.Values.Where(v => v.Errors.Count > 0)
-                      .SelectMany(v => v.Errors)
-                      .Select(v => v.ErrorMessage).ToList();
-                    return new BadRequestObjectResult(new Response<string>
-                    {
-                        Succeeded = false,
-                        Message = "Validation Errors Occured.",
-                        Errors = errors
-                    });
-                };
-            });
+            services.AddControllers();
             #region Swagger
             services.AddSwaggerGen(c =>
             {

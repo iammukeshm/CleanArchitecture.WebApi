@@ -1,4 +1,5 @@
-﻿using Application.Features.Products.Commands.CreateProduct;
+﻿using Application.Behaviours;
+using Application.Features.Products.Commands.CreateProduct;
 using AutoMapper;
 using FluentValidation;
 using MediatR;
@@ -17,6 +18,8 @@ namespace Application
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
         }
     }
 }
