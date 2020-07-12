@@ -1,5 +1,6 @@
 using Application;
 using Application.Wrappers;
+using Domain.Settings;
 using FluentValidation.AspNetCore;
 using Infrastructure.Identity;
 using Infrastructure.Persistence;
@@ -59,6 +60,7 @@ namespace WebApi
                     Description = "Input your Bearer token to access this API",
                 });
             });
+            services.Configure<JWTSettings>(_config.GetSection("JWTSettings"));
             #endregion
             #region Api Versioning
             // Add API Versioning to the Project

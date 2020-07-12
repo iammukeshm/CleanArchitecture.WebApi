@@ -26,14 +26,16 @@ namespace Infrastructure.Identity.Services
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly JWTSettings _jwtSettings;
         private readonly IDateTimeService _dateTimeService;
-        public AccountService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IOptions<JWTSettings> options, IDateTimeService dateTimeService)
+        public AccountService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IOptions<JWTSettings> options, IDateTimeService dateTimeService, SignInManager<ApplicationUser> signInManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _jwtSettings = options.Value;
             _dateTimeService = dateTimeService;
+            _signInManager = signInManager;
         }
         public async Task<Response<AuthenticationResponse>> AuthenticateAsync(AuthenticationRequest request, string ipAddress)
         {
@@ -42,19 +44,25 @@ namespace Infrastructure.Identity.Services
             {
                 throw new ApiException($"No Accounts Registered with {request.Email}.");
             }
-            if(!user.EmailConfirmed)
+            var result = await _signInManager.PasswordSignInAsync(user.UserName, request.Password, false, lockoutOnFailure: false);
+            if(!result.Succeeded)
+            {
+                throw new ApiException($"Invalid Credentials for '{request.Email}'.");
+            }
+            if (!user.EmailConfirmed)
             {
                 throw new ApiException($"Account Not Confirmed for '{request.Email}'.");
             }
             JwtSecurityToken jwtSecurityToken = await GenerateJWToken(user);
             AuthenticationResponse response = new AuthenticationResponse();
+            response.Id = user.Id;
             response.JWToken = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
             response.Email = user.Email;
             response.UserName = user.UserName;
             var rolesList = await _userManager.GetRolesAsync(user).ConfigureAwait(false);
             response.Roles = rolesList.ToList();
-
-            return new Response<AuthenticationResponse>(response,$"Logged in as {user.UserName}");
+            response.IsVerified = user.EmailConfirmed;
+            return new Response<AuthenticationResponse>(response,$"Authenticated {user.UserName}");
         }
 
         private async Task<JwtSecurityToken> GenerateJWToken(ApplicationUser user)
