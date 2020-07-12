@@ -18,10 +18,30 @@ namespace WebApi.Controllers
         {
             _accountService = accountService;
         }
-        [HttpPost]
+        [HttpPost("authenticate")]
         public async Task<IActionResult> AuthenticateAsync(AuthenticationRequest request)
         {
-            return Ok(await _accountService.AuthenticateAsync(request));
+            return Ok(await _accountService.AuthenticateAsync(request, GenerateIPAddress()));
+        }
+        [HttpPost("register")]
+        public async Task<IActionResult> RegisterAsync(RegisterRequest request)
+        {
+            var origin = Request.Headers["origin"];
+            return Ok(await _accountService.RegisterAsync(request, origin));
+        }
+        [HttpGet("confirm-email")]
+        public async Task<IActionResult> ConfirmEmailAsync([FromQuery]string userId, [FromQuery]string code)
+        {
+            var origin = Request.Headers["origin"];
+            await _accountService.ConfirmEmailAsync(userId, code);
+            return Ok();
+        }
+        private string GenerateIPAddress()
+        {
+            if (Request.Headers.ContainsKey("X-Forwarded-For"))
+                return Request.Headers["X-Forwarded-For"];
+            else
+                return HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
         }
     }
 }

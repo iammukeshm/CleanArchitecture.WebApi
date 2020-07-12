@@ -12,6 +12,7 @@ namespace Infrastructure.Persistence.Contexts
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
+            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
         public DbSet<Product> Products { get; set; }
 

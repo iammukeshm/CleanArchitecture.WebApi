@@ -13,6 +13,7 @@
     <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
   </PackageReference>
   <PackageReference Include="microsoft.extensions.dependencyinjection" Version="3.1.5" />
+  <PackageReference Include="MimeKit" Version="2.8.0" />
   <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
   </ItemGroup>
 <ItemGroup>

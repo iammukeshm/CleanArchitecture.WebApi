@@ -3,6 +3,7 @@ using Application.Wrappers;
 using FluentValidation.AspNetCore;
 using Infrastructure.Identity;
 using Infrastructure.Persistence;
+using Infrastructure.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +31,7 @@ namespace WebApi
             services.AddApplicationLayer();
             services.AddIdentityInfrastructure(_config);
             services.AddPersistenceInfrastructure(_config);
+            services.AddSharedInfrastructure();
             services.AddControllers();
             #region Swagger
             services.AddSwaggerGen(c =>

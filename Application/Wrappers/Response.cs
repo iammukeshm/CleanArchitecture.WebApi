@@ -9,10 +9,10 @@ namespace Application.Wrappers
         public Response()
         {
         }
-        internal Response(T data)
+        public Response(T data,string message = null)
         {
             Succeeded = true;
-            Message = string.Empty;
+            Message = message;
             Data = data;
         }
         public bool Succeeded { get; set; }
