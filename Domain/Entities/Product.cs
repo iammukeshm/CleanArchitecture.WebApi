@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Domain.Entities
 {
-    public class Product : BaseEntity
+    public class Product : AuditableBaseEntity
     {
         public string Name { get; set; }
         public string Barcode { get; set; }
