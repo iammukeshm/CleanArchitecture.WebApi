@@ -31,7 +31,7 @@ The primary goal is to create a Full-Fledged implementation, that is well docume
 - [ ] Healthchecks
 - [x] Pagination
 - [ ] Redis Caching
-- [ ] In-Memory Database
+- [x] In-Memory Database
 - [x] Microsoft Identity with JWT Authentication
 - [ ] Role based Authorization
 - [ ] Identity Seeding
