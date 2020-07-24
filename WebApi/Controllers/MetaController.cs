@@ -10,10 +10,10 @@ namespace WebApi.Controllers
         {
             var assembly = typeof(Startup).Assembly;
 
-            var creationDate = System.IO.File.GetCreationTime(assembly.Location);
+            var lastUpdate = System.IO.File.GetLastWriteTime(assembly.Location);
             var version = FileVersionInfo.GetVersionInfo(assembly.Location).ProductVersion;
 
-            return Ok($"Version: {version}, Last Updated: {creationDate}");
+            return Ok($"Version: {version}, Last Updated: {lastUpdate}");
         }
     }
 }
