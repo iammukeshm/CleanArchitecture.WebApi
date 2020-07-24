@@ -1,14 +1,16 @@
 # Clean Architecture with ASP.NET Core 3.1 WebApi
 ### Coming Soon. Work under Progress.
-An Implementation of Clean Architecture with ASP.NET Core 3.1 WebApi.
+An Implementation of Clean Architecture with ASP.NET Core 3.1 WebApi. With this Open-Source BoilerPlate Template, you will get access to the world of Loosely-Coupled and Inverted-Dependency Architecture in ASP.NET Core 3.1 WebApi with a lot of best practices.
 
 Check out my [blog](https://www.codewithmukesh.com) or say [Hi on Twitter!](https://twitter.com/codewithmukesh)
 
 ## Give a Star ⭐️
 If you found this Implementation helpful or used it in your Projects, do give it a star. Thanks!
+Or, If you are feeling really generous, [Support the Project with a small contribution!](https://www.buymeacoffee.com/codewithmukesh) :)
 
-## Purpose of this Repository
-The primary goal is to create a Full-Fledged implementation, that is well documented along with the steps taken to build this Solution from Scratch. I also intend to make this Solution available as a Solution Template within Visual Studio 2019 (by installing the required Nuget Package).
+
+## Purpose of this Project
+The primary goal is to create a Full-Fledged implementation, that is well documented along with the steps taken to build this Solution from Scratch. I also intend to make this Solution available as a Solution Template within Visual Studio 2019 (by installing the required Nuget Package / Extension).
 - Demonstrate Clean Monolith Architecture in ASP.NET Core 3.1 
 - This is not a Proof of Concept
 - Implementation that is ready for Production
