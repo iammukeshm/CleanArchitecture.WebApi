@@ -19,7 +19,7 @@ The primary goal is to create a Full-Fledged implementation, that is well docume
 - REST Standards
 - .NET Core 3.1 / Standard 2.1 Libraries
 
-## Technologies
+## Features
 - [x] Onion Architecture
 - [x] CQRS with MediatR Library
 - [x] Entity Framework Core - Code First
