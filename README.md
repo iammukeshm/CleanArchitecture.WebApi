@@ -14,27 +14,29 @@ The primary goal is to create a Full-Fledged implementation, that is well docume
 - Implementation that is ready for Production
 - Integrate the most essential libraries and packages
 
-## Proposed Technologies and Features
-- [x] ASP.NET Core 3.1 WebApi
-- [x] REST Standards
-- [x] .NET Core 3.1 / Standard 2.1 Libraries
+## Technologies
+- ASP.NET Core 3.1 WebApi
+- REST Standards
+- .NET Core 3.1 / Standard 2.1 Libraries
+
+## Features
 - [x] Onion Architecture
 - [x] CQRS with MediatR Library
 - [x] Entity Framework Core - Code First
 - [x] Repository Pattern - Generic
-- [ ] MediatR Pipeline Logging - Securing Sensitive Data
+- [x] MediatR Pipeline Logging & Validation
 - [x] Serilog
 - [x] Swagger UI
 - [x] Response Wrappers
 - [ ] Healthchecks
 - [x] Pagination
 - [ ] Redis Caching
-- [ ] In-Memory Database
-- [ ] Microsoft Identity with JWT Authentication
+- [x] In-Memory Database
+- [x] Microsoft Identity with JWT Authentication
 - [ ] Role based Authorization
 - [ ] Identity Seeding
 - [ ] Database Seeding
-- [ ] Custom Exception Handling Middlewares
+- [x] Custom Exception Handling Middlewares
 - [x] API Versioning
 - [x] Fluent Validation
 - [x] Automapper
