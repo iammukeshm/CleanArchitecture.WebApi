@@ -4,17 +4,21 @@ An Implementation of Clean Architecture with ASP.NET Core 3.1 WebApi. With this 
 
 Check out my [blog](https://www.codewithmukesh.com) or say [Hi on Twitter!](https://twitter.com/codewithmukesh)
 
-## Give a Star ⭐️
-If you found this Implementation helpful or used it in your Projects, do give it a star. Thanks!
-Or, If you are feeling really generous, [Support the Project with a small contribution!](https://www.buymeacoffee.com/codewithmukesh) :)
-
-
 ## Purpose of this Project
-The primary goal is to create a Full-Fledged implementation, that is well documented along with the steps taken to build this Solution from Scratch. I also intend to make this Solution available as a Solution Template within Visual Studio 2019 (by installing the required Nuget Package / Extension).
+
+Does it really make sense to Setup your ASP.NET Core Solution everytime you start a new WebApi Project ? Aren't we wasting quite a lot of time in doing this over and over gain?
+
+This is the exact Problem that I intend to solve with this Full-Fledged ASP.NET Core 3.1 WebApi Solution Template, that also follows various principles of Clean Architecture.
+
+The primary goal is to create a Full-Fledged implementation, that is well documented along with the steps taken to build this Solution from Scratch. This Solution Template will also be available within Visual Studio 2019 (by installing the required Nuget Package / Extension).
 - Demonstrate Clean Monolith Architecture in ASP.NET Core 3.1 
 - This is not a Proof of Concept
 - Implementation that is ready for Production
 - Integrate the most essential libraries and packages
+
+## Give a Star ⭐️
+If you found this Implementation helpful or used it in your Projects, do give it a star. Thanks!
+Or, If you are feeling really generous, [Support the Project with a small contribution!](https://www.buymeacoffee.com/codewithmukesh)
 
 ## Technologies
 - ASP.NET Core 3.1 WebApi
