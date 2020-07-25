@@ -48,8 +48,6 @@ Or, If you are feeling really generous, [Support the Project with a small contri
 - [x] Automapper
 - [ ] SMPT / Mailkit / Sendgrid Email Service
 - [ ] Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
-- [ ] File Upload & Manage Endpoint
-- [ ] Localization with Resources / MultiLingual Support
 
 ## Brief Overview
 ![alt text](https://www.codewithmukesh.com/wp-content/uploads/2020/06/Onion-Architecture-In-ASP.NET-Core.png)
