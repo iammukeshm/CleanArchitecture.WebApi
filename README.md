@@ -2,6 +2,8 @@
 
 An Implementation of Clean Architecture with ASP.NET Core 3.1 WebApi. With this Open-Source BoilerPlate Template, you will get access to the world of Loosely-Coupled and Inverted-Dependency Architecture in ASP.NET Core 3.1 WebApi with a lot of best practices.
 
+Check out the [Project Page](https://www.codewithmukesh.com/project/clean-architecture-with-aspnet-core-webapi/) to learn more about this Open Source Project.
+
 ## Releases
 
 v1.0-preview - [Download the first Preview here](https://github.com/iammukeshm/CleanArchitecture.WebApi/releases/tag/v1.0-preview) 
@@ -70,6 +72,7 @@ Or, If you are feeling really generous, [Support the Project with a small contri
 - Visual Studio 2019 Community and above
 - .NET Core 3.1 SDK and above
 - Basic Understanding of Architectures and Clean Code Principles
+- I Recommend that you read [Onion Architecture In ASP.NET Core With CQRS – Detailed](https://www.codewithmukesh.com/blog/onion-architecture-in-aspnet-core/) article to understand this implementation much better. This project is just an Advanced Version of the mentioned article.
 
 ## Getting Started
 
