@@ -1,6 +1,16 @@
 # Clean Architecture with ASP.NET Core 3.1 WebApi
-### Coming Soon. Work under Progress.
+
 An Implementation of Clean Architecture with ASP.NET Core 3.1 WebApi. With this Open-Source BoilerPlate Template, you will get access to the world of Loosely-Coupled and Inverted-Dependency Architecture in ASP.NET Core 3.1 WebApi with a lot of best practices.
+
+### v1 Preview.
+Follow these steps to get started with this Boiler Plate Template.
+1. Clone this Repository and Extract it to a Folder.
+3. Change the Connection Strings for the Application and Identity in the WebApi/appsettings.json - (WebApi Project)
+2. Run the following commands on Powershell in the WebApi Projecct's Directory.
+- dotnet restore
+- dotnet ef database update -Context ApplicationDbContext
+- dotnet ef database update -Context IdentityContext
+- dotnet run (OR) Run the Solution using Visual Studio 2019
 
 Check out my [blog](https://www.codewithmukesh.com) or say [Hi on Twitter!](https://twitter.com/codewithmukesh)
 
