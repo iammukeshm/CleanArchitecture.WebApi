@@ -4,7 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application.Features.Products.Commands;
 using Application.Features.Products.Commands.CreateProduct;
+using Application.Features.Products.Commands.DeleteProductById;
+using Application.Features.Products.Commands.UpdateProduct;
 using Application.Features.Products.Queries.GetAllProducts;
+using Application.Features.Products.Queries.GetProductById;
 using Application.Filters;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,9 +28,9 @@ namespace WebApi.Controllers.v1
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
+            return Ok(await Mediator.Send(new GetProductByIdQuery { Id = id }));
         }
 
         // POST api/<controller>
@@ -39,14 +42,20 @@ namespace WebApi.Controllers.v1
 
         // PUT api/<controller>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public async Task<IActionResult> Put(int id, UpdateProductCommand command)
         {
+            if (id != command.Id)
+            {
+                return BadRequest();
+            }
+            return Ok(await Mediator.Send(command));
         }
 
         // DELETE api/<controller>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+            return Ok(await Mediator.Send(new DeleteProductByIdCommand { Id = id }));
         }
     }
 }
