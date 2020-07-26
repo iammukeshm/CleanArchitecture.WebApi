@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http.Extensions;
 using Serilog;
 
 namespace WebApi
@@ -28,6 +30,7 @@ namespace WebApi
 
                 Log.Information("Application Starting.");
                 CreateHostBuilder(args).Build().Run();
+                Log.Information("Application is Running.");
             }
             catch (Exception ex)
             {
