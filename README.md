@@ -4,6 +4,15 @@ An Implementation of Clean Architecture with ASP.NET Core 3.1 WebApi. With this 
 
 Check out the [Project Page](https://www.codewithmukesh.com/project/clean-architecture-with-aspnet-core-webapi/) to learn more about this Open Source Project.
 
+## Upcoming Release 
+
+### v1.1-release 
+
+Read the [Changelog file](https://github.com/iammukeshm/CleanArchitecture.WebApi/blob/master/CHANGELOG.md) to see the new changes.
+
+Clone this repository to get the latest unreleased version.
+
+
 ## Releases
 
 v1.0-preview - [Download the first Preview here](https://github.com/iammukeshm/CleanArchitecture.WebApi/releases/tag/v1.0-preview) 
