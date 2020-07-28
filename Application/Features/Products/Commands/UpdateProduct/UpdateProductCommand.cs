@@ -14,7 +14,6 @@ namespace Application.Features.Products.Commands.UpdateProduct
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Barcode { get; set; }
         public string Description { get; set; }
         public decimal Rate { get; set; }
         public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, Response<int>>
@@ -34,7 +33,6 @@ namespace Application.Features.Products.Commands.UpdateProduct
                 }
                 else
                 {
-                    product.Barcode = command.Barcode;
                     product.Name = command.Name;
                     product.Rate = command.Rate;
                     product.Description = command.Description;

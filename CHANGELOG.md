@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
 - Refactored Service Extension at Startup.cs
 - code cleanup
 - added response for confirm-email endpoint
+- secured POST/DELETE/PUT Endpoints with JWT . Only Authorized Users can access these endpoints. To Generate a token, Register a new account at /api/account/register. Get it confirmed. Generate JWTokens at /api/account/authenticate and use the tokens to access the secured endpoints.
+
 
 ## Released
 ## v1.0-preview

@@ -9,6 +9,7 @@ using Application.Features.Products.Commands.UpdateProduct;
 using Application.Features.Products.Queries.GetAllProducts;
 using Application.Features.Products.Queries.GetProductById;
 using Application.Filters;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -35,6 +36,7 @@ namespace WebApi.Controllers.v1
 
         // POST api/<controller>
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Post(CreateProductCommand command)
         {
             return Ok(await Mediator.Send(command));
@@ -42,6 +44,7 @@ namespace WebApi.Controllers.v1
 
         // PUT api/<controller>/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> Put(int id, UpdateProductCommand command)
         {
             if (id != command.Id)
@@ -53,6 +56,7 @@ namespace WebApi.Controllers.v1
 
         // DELETE api/<controller>/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> Delete(int id)
         {
             return Ok(await Mediator.Send(new DeleteProductByIdCommand { Id = id }));

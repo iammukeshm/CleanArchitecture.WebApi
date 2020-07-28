@@ -11,7 +11,7 @@ using System.Text;
 
 namespace Application
 {
-    public static class ServiceRegistration
+    public static class ServiceExtensions
     {
         public static void AddApplicationLayer(this IServiceCollection services)
         {
