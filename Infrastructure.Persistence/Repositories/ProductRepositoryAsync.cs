@@ -22,7 +22,7 @@ namespace Infrastructure.Persistence.Repositories
         public Task<bool> IsUniqueBarcodeAsync(string barcode)
         {
             return _products
-                .AnyAsync(p => p.Barcode == barcode);
+                .AllAsync(p => p.Barcode != barcode);
         }
     }
 }
