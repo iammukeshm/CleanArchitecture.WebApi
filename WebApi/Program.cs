@@ -28,9 +28,8 @@ namespace WebApi
             try
             {
 
-                Log.Information("Application Starting.");
+                Log.Information("Application Starting");
                 CreateHostBuilder(args).Build().Run();
-                Log.Information("Application is Running.");
             }
             catch (Exception ex)
             {

@@ -32,14 +32,14 @@ namespace Infrastructure.Identity.Services
         private readonly IDateTimeService _dateTimeService;
         public AccountService(UserManager<ApplicationUser> userManager, 
             RoleManager<IdentityRole> roleManager, 
-            IOptions<JWTSettings> options, 
+            IOptions<JWTSettings> jwtSettings, 
             IDateTimeService dateTimeService, 
             SignInManager<ApplicationUser> signInManager,
             IEmailService emailService)
         {
             _userManager = userManager;
             _roleManager = roleManager;
-            _jwtSettings = options.Value;
+            _jwtSettings = jwtSettings.Value;
             _dateTimeService = dateTimeService;
             _signInManager = signInManager;
             this._emailService = emailService;

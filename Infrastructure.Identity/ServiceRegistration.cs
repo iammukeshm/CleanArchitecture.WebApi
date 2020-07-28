@@ -1,4 +1,5 @@
 ﻿using Application.Interfaces;
+using Domain.Settings;
 using Infrastructure.Identity.Contexts;
 using Infrastructure.Identity.Models;
 using Infrastructure.Identity.Services;
@@ -29,6 +30,7 @@ namespace Infrastructure.Identity
             #region Services
             services.AddTransient<IAccountService, AccountService>();
             #endregion
+            services.Configure<JWTSettings>(configuration.GetSection("JWTSettings"));
         }
     }
 }
