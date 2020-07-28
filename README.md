@@ -1,6 +1,6 @@
  <img align="left" width="116" height="116" src="https://www.codewithmukesh.com/wp-content/uploads/2020/07/cleanarchitecture_icon.png" />
  
- ## Clean Architecture with ASP.NET Core WebApi
+ # Clean Architecture with ASP.NET Core WebApi
 
  ![GitHub](https://img.shields.io/github/license/iammukeshm/CleanArchitecture.WebApi)
 ![GitHub contributors](https://img.shields.io/github/contributors/iammukeshm/CleanArchitecture.WebApi)
