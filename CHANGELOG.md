@@ -3,7 +3,14 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-## Version 1.0 - 23, June 2020
+## v1.1-release
+
+- Refactored Service Extension at Startup.cs
+- code cleanup
+- added response for confirm-email endpoint
+
+## Released
+## v1.0-preview
 
 ### Added
 - setup folder structure
