@@ -6,6 +6,7 @@ using Domain.Settings;
 using Infrastructure.Identity.Helpers;
 using Infrastructure.Identity.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -169,11 +170,19 @@ namespace Infrastructure.Identity.Services
             return verificationUri;
         }
 
-        public async Task ConfirmEmailAsync(string userId, string code)
+        public async Task<Response<string>> ConfirmEmailAsync(string userId, string code)
         {
             var user = await _userManager.FindByIdAsync(userId);
             code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));
             var result = await _userManager.ConfirmEmailAsync(user, code);
+            if(result.Succeeded)
+            {
+                return new Response<string>(user.Id, message: $"Account Confirmed for {user.Email}. You can now use the /api/Account/authenticate endpoint.");
+            }
+            else
+            {
+                throw new ApiException($"An error occured while confirming {user.Email}.");
+            }
         }
 
         private RefreshToken GenerateRefreshToken(string ipAddress)

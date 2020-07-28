@@ -11,6 +11,6 @@ namespace Application.Interfaces
     {
         Task<Response<AuthenticationResponse>> AuthenticateAsync(AuthenticationRequest request, string ipAddress);
         Task<Response<string>> RegisterAsync(RegisterRequest request, string origin);
-        Task ConfirmEmailAsync(string userId, string code);
+        Task<Response<string>> ConfirmEmailAsync(string userId, string code);
     }
 }

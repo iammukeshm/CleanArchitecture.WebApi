@@ -33,8 +33,7 @@ namespace WebApi.Controllers
         public async Task<IActionResult> ConfirmEmailAsync([FromQuery]string userId, [FromQuery]string code)
         {
             var origin = Request.Headers["origin"];
-            await _accountService.ConfirmEmailAsync(userId, code);
-            return Ok();
+            return Ok(await _accountService.ConfirmEmailAsync(userId, code));
         }
         private string GenerateIPAddress()
         {
