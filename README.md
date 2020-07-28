@@ -5,7 +5,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/iammukeshm/CleanArchitecture.WebApi)
 ![GitHub commits since tagged version](https://img.shields.io/github/commits-since/iammukeshm/CleanArchitecture.WebApi/v1.0-preview?label=commits)
 ![GitHub stars](https://img.shields.io/github/stars/iammukeshm/CleanArchitecture.WebApi)
-![Twitter Follow](https://img.shields.io/twitter/follow/codewithmukesh?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/codewithmukesh?style=social&label=follow)
 
 <br/>
 
