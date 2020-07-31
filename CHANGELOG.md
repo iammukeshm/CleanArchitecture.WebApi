@@ -9,7 +9,11 @@ All notable changes to this project will be documented in this file.
 - code cleanup
 - added response for confirm-email endpoint
 - secured POST/DELETE/PUT Endpoints with JWT . Only Authorized Users can access these endpoints. To Generate a token, Register a new account at /api/account/register. Get it confirmed. Generate JWTokens at /api/account/authenticate and use the tokens to access the secured endpoints.
-
+- added default roles (SuperAdmin,Admin,Moderator,Basic). Found at Application/Enums/Roles
+- added default roles seeding on startup
+- added default users seeding at startup. Here are the default credentials ( superadmin@gmail.com / 123Pa$$word! ) ( basic@gmail.com / 123Pa$$word! )
+- updated nugget packages
+- added custom response for 401 & 403
 
 ## Released
 ## v1.0-preview
