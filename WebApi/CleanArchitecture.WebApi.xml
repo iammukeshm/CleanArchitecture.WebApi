@@ -4,5 +4,13 @@
         <name>WebApi</name>
     </assembly>
     <members>
+        <member name="M:WebApi.Controllers.AccountController.AuthenticateAsync(Application.DTOs.Account.AuthenticationRequest)">
+            <summary>
+            [ superadmin@gmail.com / 123Pa$$word! ]
+            [ basic@gmail.com / 123Pa$$word! ]
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

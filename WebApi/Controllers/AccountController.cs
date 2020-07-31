@@ -18,6 +18,12 @@ namespace WebApi.Controllers
         {
             _accountService = accountService;
         }
+        /// <summary>
+        /// [ superadmin@gmail.com / 123Pa$$word! ]
+        /// [ basic@gmail.com / 123Pa$$word! ]
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPost("authenticate")]
         public async Task<IActionResult> AuthenticateAsync(AuthenticationRequest request)
         {
