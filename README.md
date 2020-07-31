@@ -70,14 +70,14 @@ Or, If you are feeling really generous, [Support the Project with a small contri
 - [ ] Redis Caching
 - [x] In-Memory Database
 - [x] Microsoft Identity with JWT Authentication
-- [ ] Role based Authorization
-- [ ] Identity Seeding
-- [ ] Database Seeding
+- [x] Role based Authorization
+- [x] Identity Seeding
+- [x] Database Seeding
 - [x] Custom Exception Handling Middlewares
 - [x] API Versioning
 - [x] Fluent Validation
 - [x] Automapper
-- [ ] SMPT / Mailkit / Sendgrid Email Service
+- [x] SMTP / Mailkit / Sendgrid Email Service
 - [ ] Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
 
 ## Brief Overview
