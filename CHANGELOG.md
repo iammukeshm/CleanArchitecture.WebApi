@@ -15,6 +15,8 @@ All notable changes to this project will be documented in this file.
 - updated nugget packages
 - added custom response for 401 & 403
 - any newly registered user will be added to the Basic User Role. All associated roles of a user will be visible on /api/Account/authenticate response.
+- added forgot-password / reset-password endpoints
+- added basic health check at /health
 
 ## Released
 ## v1.0-preview

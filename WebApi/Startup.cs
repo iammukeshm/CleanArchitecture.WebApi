@@ -27,6 +27,7 @@ namespace WebApi
             services.AddSwaggerExtension();
             services.AddControllers();
             services.AddApiVersioningExtension();
+            services.AddHealthChecks();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -46,7 +47,9 @@ namespace WebApi
             app.UseAuthorization();
             app.UseSwaggerExtension();
             app.UseErrorHandlingMiddleware();
-            app.UseEndpoints(endpoints =>
+            app.UseHealthChecks("/health");
+
+           app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
