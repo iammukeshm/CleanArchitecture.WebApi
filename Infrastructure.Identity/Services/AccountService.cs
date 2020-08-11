@@ -21,6 +21,8 @@ using System.Security.Cryptography;
 using System.Text;
 using Application.Enums;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Primitives;
+using Application.DTOs.Email;
 
 namespace Infrastructure.Identity.Services
 {
@@ -196,6 +198,40 @@ namespace Infrastructure.Identity.Services
                 Created = DateTime.UtcNow,
                 CreatedByIp = ipAddress
             };
+        }
+
+        public async Task ForgotPassword(ForgotPasswordRequest model, string origin)
+        {
+            var account = await _userManager.FindByEmailAsync(model.Email);
+
+            // always return ok response to prevent email enumeration
+            if (account == null) return;
+
+            var code = await _userManager.GeneratePasswordResetTokenAsync(account);
+            var route = "api/account/reset-password/";
+            var _enpointUri = new Uri(string.Concat($"{origin}/", route));
+            var emailRequest = new EmailRequest()
+            {
+                Body = $"You reset token is - {code}",
+                To = model.Email,
+                Subject = "Reset Password",
+            };
+            await _emailService.SendAsync(emailRequest);
+        }
+
+        public async Task<Response<string>> ResetPassword(ResetPasswordRequest model)
+        {
+            var account = await _userManager.FindByEmailAsync(model.Email);
+            if (account == null) throw new ApiException($"No Accounts Registered with {model.Email}.");
+            var result = await _userManager.ResetPasswordAsync(account, model.Token, model.Password);
+            if(result.Succeeded)
+            {
+                return new Response<string>(model.Email, message: $"Password Resetted.");
+            }
+            else
+            {
+                throw new ApiException($"Error occured while reseting the password.");
+            }
         }
     }
 

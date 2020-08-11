@@ -1,4 +1,4 @@
- # Clean Architecture with ASP.NET Core WebApi
+ # ASP.NET Core WebApi - Clean Architecture
 
 ![.NET Core](https://github.com/iammukeshm/CleanArchitecture.WebApi/workflows/.NET%20Core/badge.svg?branch=master)
 ![GitHub stars](https://img.shields.io/github/stars/iammukeshm/CleanArchitecture.WebApi)
@@ -65,8 +65,9 @@ Or, If you are feeling really generous, [Support the Project with a small contri
 - [x] Serilog
 - [x] Swagger UI
 - [x] Response Wrappers
-- [ ] Healthchecks
+- [x] Healthchecks
 - [x] Pagination
+- [ ] In-Memory Caching
 - [ ] Redis Caching
 - [x] In-Memory Database
 - [x] Microsoft Identity with JWT Authentication
@@ -78,7 +79,7 @@ Or, If you are feeling really generous, [Support the Project with a small contri
 - [x] Fluent Validation
 - [x] Automapper
 - [x] SMTP / Mailkit / Sendgrid Email Service
-- [ ] Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
+- [x] Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
 
 ## Brief Overview
 ![alt text](https://www.codewithmukesh.com/wp-content/uploads/2020/06/Onion-Architecture-In-ASP.NET-Core.png)

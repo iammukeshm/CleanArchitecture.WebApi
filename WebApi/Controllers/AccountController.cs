@@ -18,12 +18,6 @@ namespace WebApi.Controllers
         {
             _accountService = accountService;
         }
-        /// <summary>
-        /// [ superadmin@gmail.com / 123Pa$$word! ]
-        /// [ basic@gmail.com / 123Pa$$word! ]
-        /// </summary>
-        /// <param name="request"></param>
-        /// <returns></returns>
         [HttpPost("authenticate")]
         public async Task<IActionResult> AuthenticateAsync(AuthenticationRequest request)
         {
@@ -40,6 +34,18 @@ namespace WebApi.Controllers
         {
             var origin = Request.Headers["origin"];
             return Ok(await _accountService.ConfirmEmailAsync(userId, code));
+        }
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordRequest model)
+        {
+            await _accountService.ForgotPassword(model, Request.Headers["origin"]);
+            return Ok();
+        }
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordRequest model)
+        {
+            
+            return Ok(await _accountService.ResetPassword(model));
         }
         private string GenerateIPAddress()
         {
