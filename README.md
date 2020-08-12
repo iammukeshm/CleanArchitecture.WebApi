@@ -80,6 +80,7 @@ Or, If you are feeling really generous, [Support the Project with a small contri
 - [x] Automapper
 - [x] SMTP / Mailkit / Sendgrid Email Service
 - [x] Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
+- [x] User Auditing
 
 ## Brief Overview
 ![alt text](https://www.codewithmukesh.com/wp-content/uploads/2020/06/Onion-Architecture-In-ASP.NET-Core.png)

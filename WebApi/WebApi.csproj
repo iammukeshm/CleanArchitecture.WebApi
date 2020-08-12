@@ -40,8 +40,4 @@
     <ProjectReference Include="..\Infrastructure.Shared\Infrastructure.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>
