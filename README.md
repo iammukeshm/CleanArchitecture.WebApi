@@ -8,7 +8,7 @@
 
 An Implementation of Clean Architecture with ASP.NET Core 3.1 WebApi. With this Open-Source BoilerPlate Template, you will get access to the world of Loosely-Coupled and Inverted-Dependency Architecture in ASP.NET Core 3.1 WebApi with a lot of best practices.
 
-Check out the [Project Page](https://www.codewithmukesh.com/project/clean-architecture-with-aspnet-core-webapi/) to learn more about this Open Source Project.
+Check out the [Project Page](https://www.codewithmukesh.com/project/aspnet-core-webapi-clean-architecture/) to learn more about this Open Source Project.
 
 ## Upcoming Release 
 
@@ -20,11 +20,30 @@ Clone this repository to get the latest unreleased version.
 
 
 ## Releases
-
+v1.1 - Stable Release - [Download the Stable Release](https://github.com/iammukeshm/CleanArchitecture.WebApi/releases/tag/v1.1) 
 v1.0-preview - [Download the first Preview here](https://github.com/iammukeshm/CleanArchitecture.WebApi/releases/tag/v1.0-preview) 
 
-### v1 Preview.
+### v1.1
+
 Follow these steps to get started with this Boiler Plate Template.
+
+## Download the Extension
+Download this Extension and install it on your machine. Make sure Visual Studio 2019 is installed on your machine with the latest SDK.
+
+Follow these Steps to get started.
+
+![alt text](https://www.codewithmukesh.com/wp-content/uploads/2020/08/cleanArchitecture_VisualStudio.png)
+
+![alt text](https://www.codewithmukesh.com/wp-content/uploads/2020/08/cleanArchitecture_NewProject.png)
+
+You Solution Template is Ready!
+
+![alt text](https://www.codewithmukesh.com/wp-content/uploads/2020/08/cleanArchitecture_FolderStructure.png)
+
+Visit the Project Page to learn more - [Click Here](https://www.codewithmukesh.com/project/aspnet-core-webapi-clean-architecture/)
+
+Alternativelym you can also clone the Repository.
+
 1. Clone this Repository and Extract it to a Folder.
 3. Change the Connection Strings for the Application and Identity in the WebApi/appsettings.json - (WebApi Project)
 2. Run the following commands on Powershell in the WebApi Projecct's Directory.
