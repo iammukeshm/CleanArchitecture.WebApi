@@ -340,3 +340,4 @@ ASALocalRun/
 healthchecksdb
 
 WebApi/appsettings.Development.json
+VSIXCore/
