@@ -24,7 +24,8 @@ v1.0-preview - [Download the first Preview here](https://github.com/iammukeshm/C
 Follow these steps to get started with this Boiler Plate Template.
 
 ### Download the Extension
-Download this Extension and install it on your machine. Make sure Visual Studio 2019 is installed on your machine with the latest SDK.
+Make sure Visual Studio 2019 is installed on your machine with the latest SDK.
+[Download from Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=MukeshMurugan.CleanArchitectureWebApi). Install it on your machine.
 
 Follow these Steps to get started.
 
