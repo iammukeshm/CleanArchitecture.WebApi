@@ -51,6 +51,21 @@ Visit the Project Page to learn more - [Click Here](https://www.codewithmukesh.c
 
 Check out my [blog](https://www.codewithmukesh.com) or say [Hi on Twitter!](https://twitter.com/codewithmukesh)
 
+### Default Roles & Credentials
+As soon you build and run your application, default users and roles get added to the database.
+
+Default Roles are as follows.
+- SuperAdmin
+- Admin
+- Moderator
+- Basic
+
+Here are the credentials for the default users.
+- Email - superadmin@gmail.com  / Password - 123Pa$$word!
+- Email - basic@gmail.com  / Password - 123Pa$$word!
+
+You can use these default credentials to generate valid JWTokens at the ../api/account/authenticate endpoint.
+
 ## Purpose of this Project
 
 Does it really make sense to Setup your ASP.NET Core Solution everytime you start a new WebApi Project ? Aren't we wasting quite a lot of time in doing this over and over gain?
