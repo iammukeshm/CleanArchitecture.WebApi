@@ -18,10 +18,12 @@ namespace Application.Features.Products.Commands.CreateProduct
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, Response<int>>
     {
         private readonly IProductRepositoryAsync _productRepository;
+        private readonly IGenericUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        public CreateProductCommandHandler(IProductRepositoryAsync productRepository, IMapper mapper)
+        public CreateProductCommandHandler(IProductRepositoryAsync productRepository, IGenericUnitOfWork unitOfWork, IMapper mapper)
         {
             _productRepository = productRepository;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
@@ -29,6 +31,7 @@ namespace Application.Features.Products.Commands.CreateProduct
         {
             var product = _mapper.Map<Product>(request);
             await _productRepository.AddAsync(product);
+            await _unitOfWork.Commit(cancellationToken);
             return new Response<int>(product.Id);
         }
     }

@@ -19,9 +19,12 @@ namespace Application.Features.Products.Commands.UpdateProduct
         public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, Response<int>>
         {
             private readonly IProductRepositoryAsync _productRepository;
-            public UpdateProductCommandHandler(IProductRepositoryAsync productRepository)
+            private readonly IGenericUnitOfWork _unitOfWork;
+
+            public UpdateProductCommandHandler(IProductRepositoryAsync productRepository, IGenericUnitOfWork unitOfWork)
             {
                 _productRepository = productRepository;
+                _unitOfWork = unitOfWork;
             }
             public async Task<Response<int>> Handle(UpdateProductCommand command, CancellationToken cancellationToken)
             {
@@ -37,6 +40,7 @@ namespace Application.Features.Products.Commands.UpdateProduct
                     product.Rate = command.Rate;
                     product.Description = command.Description;
                     await _productRepository.UpdateAsync(product);
+                    await _unitOfWork.Commit(cancellationToken);
                     return new Response<int>(product.Id);
                 }
             }

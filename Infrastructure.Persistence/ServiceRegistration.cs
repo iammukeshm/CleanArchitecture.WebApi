@@ -30,6 +30,7 @@ namespace Infrastructure.Persistence
             }
             #region Repositories
             services.AddTransient(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));
+            services.AddTransient<IGenericUnitOfWork, GenericUnitOfWork>();
             services.AddTransient<IProductRepositoryAsync, ProductRepositoryAsync>();
             #endregion
         }
