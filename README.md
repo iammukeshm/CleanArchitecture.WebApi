@@ -51,6 +51,29 @@ Visit the Project Page to learn more - [Click Here](https://www.codewithmukesh.c
 
 Check out my [blog](https://www.codewithmukesh.com) or say [Hi on Twitter!](https://twitter.com/codewithmukesh)
 
+### How to use MySQL as your Data Provider
+The Project currently uses MSSQL as the default Data Provider. If you are more comfortable with MySQL, Here is how to migrate to MySQL easily.
+
+
+1. delete all existing file inside migrations folder on both project
+   - {YourProjectName}.Infrastructure.Identity
+   - {YourProjectName}.Infrastructure.Persistence
+
+2. change from `options.UseSqlServer` to `options.UseMySql` in `ServiceExtensions.cs` and `ServiceRegistration.cs`
+
+3. run `dotnet add package Pomelo.EntityFrameworkCore.MySql --version 3.1.2` on two project/subproject
+4. on `IdentityContext.cs` comment `builder.HasDefaultSchema("Identity");` because ef doesn't support that on mysql
+
+5. cd to `{YourProjectName}.Infrastructure.Identity` and run
+   - `dotnet ef database update --startup-project ../{YourProjectName}.WebApi/{YourProjectName}.WebApi.csproj -c "IdentityContext"`
+   - `dotnet ef migrations add Initial --startup-project ../{YourProjectName}.WebApi/{YourProjectName}.WebApi.csproj -c "IdentityContext"`
+
+6. cd to `{YourProjectName}.Infrastructure.Persistence` and run
+   - `dotnet ef database update --startup-project ../{YourProjectName}.WebApi/{YourProjectName}.WebApi.csproj -c "ApplicationDbContext"`
+   - `dotnet ef migrations add Initial --startup-project ../{YourProjectName}.WebApi/{YourProjectName}.WebApi.csproj -c "ApplicationDbContext"`
+   
+The above guide (To use MySQL) was contributed by [geekz-reno](https://github.com/geekz-reno).
+
 ### Default Roles & Credentials
 As soon you build and run your application, default users and roles get added to the database.
 
