@@ -51,17 +51,31 @@ Visit the Project Page to learn more - [Click Here](https://www.codewithmukesh.c
 
 Check out my [blog](https://www.codewithmukesh.com) or say [Hi on Twitter!](https://twitter.com/codewithmukesh)
 
-### How to use MySQL as your Data Provider
-The Project currently uses MSSQL as the default Data Provider. If you are more comfortable with MySQL, Here is how to migrate to MySQL easily.
+### How to use MySQL or PostgreSQL as your Data Provider
+The Project currently uses MSSQL as the default Data Provider. If you are more comfortable with MySQL or PostgreSQL, here is how to migrate to them easily.
 
 
 1. delete all existing file inside migrations folder on both project
    - {YourProjectName}.Infrastructure.Identity
    - {YourProjectName}.Infrastructure.Persistence
 
-2. change from `options.UseSqlServer` to `options.UseMySql` in `ServiceExtensions.cs` and `ServiceRegistration.cs`
+2. In in `ServiceExtensions.cs` and `ServiceRegistration.cs` change from `options.UseSqlServer` to:
+#### For MySql
+`options.UseMySql`
+#### For PostgreSQL
+`options.UseNpgsql`
 
-3. run `dotnet add package Pomelo.EntityFrameworkCore.MySql --version 3.1.2` on two project/subproject
+3. Add NuGet packages to both projects (Infrastructure.Identity and Infrastructure.Persistence):
+#### For MySql:
+run `dotnet add package Pomelo.EntityFrameworkCore.MySql --version 3.1.2` (remember to do this on both projects)
+#### For PostgreSQL:
+run 
+```cli
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL.Design
+```
+(remember to do this on both projects)
+
 4. on `IdentityContext.cs` comment `builder.HasDefaultSchema("Identity");` because ef doesn't support that on mysql
 
 5. cd to `{YourProjectName}.Infrastructure.Identity` and run
