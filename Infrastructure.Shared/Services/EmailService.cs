@@ -28,7 +28,7 @@ namespace Infrastructure.Shared.Services
             {
                 // create message
                 var email = new MimeMessage();
-                email.Sender = MailboxAddress.Parse(request.From ?? _mailSettings.EmailFrom);
+                email.Sender = new MailboxAddress(_mailSettings.DisplayName, request.From ?? _mailSettings.EmailFrom);
                 email.To.Add(MailboxAddress.Parse(request.To));
                 email.Subject = request.Subject;
                 var builder = new BodyBuilder();
