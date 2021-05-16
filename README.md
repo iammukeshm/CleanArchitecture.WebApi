@@ -13,6 +13,11 @@ Check out the [Project Page](https://www.codewithmukesh.com/project/aspnet-core-
 Read the [Changelog file](https://github.com/iammukeshm/CleanArchitecture.WebApi/blob/master/CHANGELOG.md) to see the new changes.
 
 
+# Clean Architecture - WebAPI 5.0
+
+I will developing the Clean Architecture WebAPI Template for .NET 5.0+ in another repository. Those interested, kindly star the following repository - 
+https://github.com/fullstackhero/aspnet-core-webapi-boilerplate
+The work is still under progress and is expected to be live by June 1st week.
 
 ## Releases
 v1.1 - Stable Release - [Download the Stable Release](https://github.com/iammukeshm/CleanArchitecture.WebApi/releases/tag/v1.1) 
