@@ -15,11 +15,13 @@ namespace WebApi
 {
     public class Startup
     {
-        public IConfiguration _config { get; }
         public Startup(IConfiguration configuration)
         {
             _config = configuration;
         }
+
+        public IConfiguration _config { get; }
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApplicationLayer();
@@ -44,6 +46,7 @@ namespace WebApi
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthentication();
@@ -52,10 +55,7 @@ namespace WebApi
             app.UseErrorHandlingMiddleware();
             app.UseHealthChecks("/health");
 
-           app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }

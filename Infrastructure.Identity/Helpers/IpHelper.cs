@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
+﻿using System.Net;
 using System.Net.Sockets;
-using System.Text;
 
 namespace Infrastructure.Identity.Helpers
 {
@@ -12,12 +9,8 @@ namespace Infrastructure.Identity.Helpers
         {
             var host = Dns.GetHostEntry(Dns.GetHostName());
             foreach (var ip in host.AddressList)
-            {
                 if (ip.AddressFamily == AddressFamily.InterNetwork)
-                {
                     return ip.ToString();
-                }
-            }
             return string.Empty;
         }
     }

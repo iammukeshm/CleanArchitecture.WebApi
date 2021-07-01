@@ -2,9 +2,6 @@
 using Application.Features.Products.Queries.GetAllProducts;
 using AutoMapper;
 using Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Application.Mappings
 {

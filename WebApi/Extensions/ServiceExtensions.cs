@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebApi.Extensions
 {
@@ -14,7 +12,8 @@ namespace WebApi.Extensions
         {
             services.AddSwaggerGen(c =>
             {
-                c.IncludeXmlComments(string.Format(@"{0}\CleanArchitecture.WebApi.xml", System.AppDomain.CurrentDomain.BaseDirectory));
+                c.IncludeXmlComments(string.Format(@"{0}\CleanArchitecture.WebApi.xml",
+                    AppDomain.CurrentDomain.BaseDirectory));
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
@@ -24,7 +23,7 @@ namespace WebApi.Extensions
                     {
                         Name = "codewithmukesh",
                         Email = "hello@codewithmukesh.com",
-                        Url = new Uri("https://codewithmukesh.com/contact"),
+                        Url = new Uri("https://codewithmukesh.com/contact")
                     }
                 });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -34,7 +33,7 @@ namespace WebApi.Extensions
                     Type = SecuritySchemeType.ApiKey,
                     Scheme = "Bearer",
                     BearerFormat = "JWT",
-                    Description = "Input your Bearer token in this format - Bearer {your token here} to access this API",
+                    Description = "Input your Bearer token in this format - Bearer {your token here} to access this API"
                 });
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
@@ -44,16 +43,18 @@ namespace WebApi.Extensions
                             Reference = new OpenApiReference
                             {
                                 Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer",
+                                Id = "Bearer"
                             },
                             Scheme = "Bearer",
                             Name = "Bearer",
-                            In = ParameterLocation.Header,
-                        }, new List<string>()
-                    },
+                            In = ParameterLocation.Header
+                        },
+                        new List<string>()
+                    }
                 });
             });
         }
+
         public static void AddApiVersioningExtension(this IServiceCollection services)
         {
             services.AddApiVersioning(config =>
