@@ -1,17 +1,15 @@
-﻿using Application.Enums;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using Application.Enums;
 using Infrastructure.Identity.Models;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Identity.Seeds
 {
     public static class DefaultBasicUser
     {
-        public static async Task SeedAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        public static async Task SeedAsync(UserManager<ApplicationUser> userManager,
+            RoleManager<IdentityRole> roleManager)
         {
             //Seed Default User
             var defaultUser = new ApplicationUser
@@ -31,7 +29,6 @@ namespace Infrastructure.Identity.Seeds
                     await userManager.CreateAsync(defaultUser, "123Pa$$word!");
                     await userManager.AddToRoleAsync(defaultUser, Roles.Basic.ToString());
                 }
-
             }
         }
     }

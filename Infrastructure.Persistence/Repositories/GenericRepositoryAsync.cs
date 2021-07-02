@@ -1,11 +1,9 @@
-﻿using Application.Interfaces;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Application.Interfaces;
 using Infrastructure.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Repository
 {
@@ -55,8 +53,8 @@ namespace Infrastructure.Persistence.Repository
         public async Task<IReadOnlyList<T>> GetAllAsync()
         {
             return await _dbContext
-                 .Set<T>()
-                 .ToListAsync();
+                .Set<T>()
+                .ToListAsync();
         }
     }
 }

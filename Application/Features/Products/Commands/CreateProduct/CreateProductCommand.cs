@@ -1,24 +1,26 @@
-﻿using Application.Interfaces.Repositories;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using Application.Interfaces.Repositories;
 using Application.Wrappers;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Application.Features.Products.Commands.CreateProduct
 {
-    public partial class CreateProductCommand : IRequest<Response<int>>
+    public class CreateProductCommand : IRequest<Response<int>>
     {
         public string Name { get; set; }
         public string Barcode { get; set; }
         public string Description { get; set; }
         public decimal Rate { get; set; }
     }
+
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, Response<int>>
     {
-        private readonly IProductRepositoryAsync _productRepository;
         private readonly IMapper _mapper;
+        private readonly IProductRepositoryAsync _productRepository;
+
         public CreateProductCommandHandler(IProductRepositoryAsync productRepository, IMapper mapper)
         {
             _productRepository = productRepository;

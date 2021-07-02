@@ -1,4 +1,6 @@
-﻿using Application.DTOs.Email;
+﻿using System;
+using System.Threading.Tasks;
+using Application.DTOs.Email;
 using Application.Exceptions;
 using Application.Interfaces;
 using Domain.Settings;
@@ -7,20 +9,19 @@ using MailKit.Security;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MimeKit;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Shared.Services
 {
     public class EmailService : IEmailService
     {
-        public MailSettings _mailSettings { get; }
-        public ILogger<EmailService> _logger { get; }
-
-        public EmailService(IOptions<MailSettings> mailSettings,ILogger<EmailService> logger)
+        public EmailService(IOptions<MailSettings> mailSettings, ILogger<EmailService> logger)
         {
             _mailSettings = mailSettings.Value;
             _logger = logger;
         }
+
+        public MailSettings _mailSettings { get; }
+        public ILogger<EmailService> _logger { get; }
 
         public async Task SendAsync(EmailRequest request)
         {
@@ -39,9 +40,8 @@ namespace Infrastructure.Shared.Services
                 smtp.Authenticate(_mailSettings.SmtpUser, _mailSettings.SmtpPass);
                 await smtp.SendAsync(email);
                 smtp.Disconnect(true);
-
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 _logger.LogError(ex.Message, ex);
                 throw new ApiException(ex.Message);

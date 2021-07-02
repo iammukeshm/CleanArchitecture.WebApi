@@ -1,8 +1,5 @@
-﻿using Application.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
+﻿using System;
+using Application.Interfaces;
 
 namespace Infrastructure.Shared.Services
 {

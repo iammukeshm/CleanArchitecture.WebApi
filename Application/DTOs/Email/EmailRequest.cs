@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Application.DTOs.Email
+﻿namespace Application.DTOs.Email
 {
     public class EmailRequest
     {

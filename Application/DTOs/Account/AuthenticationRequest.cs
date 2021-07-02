@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Application.DTOs.Account
+﻿namespace Application.DTOs.Account
 {
     public class AuthenticationRequest
     {
