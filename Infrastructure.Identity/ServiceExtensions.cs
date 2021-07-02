@@ -29,6 +29,7 @@ namespace Infrastructure.Identity
                     options.UseSqlServer(
                         configuration.GetConnectionString("IdentityConnection"),
                         b => b.MigrationsAssembly(typeof(IdentityContext).Assembly.FullName)));
+
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>()
                 .AddDefaultTokenProviders();
 
