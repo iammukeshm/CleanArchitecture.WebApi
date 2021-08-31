@@ -15,7 +15,7 @@ Read the [Changelog file](https://github.com/iammukeshm/CleanArchitecture.WebApi
 ## Announcment!
 
 I am no longer supporting this project. No more new features will be added to this repository.
-I am building a .NET WebApi 6.0 with better features and Multitenancy ofcourse! Visit the new project - https://github.com/fullstackhero/dotnet-webapi-boilerplate
+I am building a .NET WebApi 6.0 Clean Architecture Boilerplate Project with better features and Multitenancy ofcourse! Visit the new project - https://github.com/fullstackhero/dotnet-webapi-boilerplate
 
 ## Releases
 v1.1 - Stable Release - [Download the Stable Release](https://github.com/iammukeshm/CleanArchitecture.WebApi/releases/tag/v1.1) 
