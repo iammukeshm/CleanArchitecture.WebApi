@@ -12,7 +12,7 @@ Check out the [Project Page](https://www.codewithmukesh.com/project/aspnet-core-
 
 Read the [Changelog file](https://github.com/iammukeshm/CleanArchitecture.WebApi/blob/master/CHANGELOG.md) to see the new changes.
 
-## Announcment!
+## Annoucement : fullstackhero - .NET 6.0 Clean Architecture WebAPI ! 
 
 I am no longer supporting this project. No more new features will be added to this repository.
 I am building a .NET WebApi 6.0 Clean Architecture Boilerplate Project with better features and Multitenancy ofcourse! Visit the new project - https://github.com/fullstackhero/dotnet-webapi-boilerplate
@@ -21,7 +21,27 @@ I am building a .NET WebApi 6.0 Clean Architecture Boilerplate Project with bett
     <img src="https://codewithmukesh.com/wp-content/uploads/2021/08/fullstackhero-banner.jpg" alt="fullstackhero">
 </p>
 
-## Releases
+### 0.0.1 RC is available now!
+
+This is the first pre-release version of the `fullstackhero .NET WebAPI Boilerplate` package. Newer versions will be available on a weekly basis with newer updates and patches. [Read the getting-started guide for more.](https://fullstackhero.net/dotnet-webapi-boilerplate/general/getting-started/)
+
+The Release Version is expected to be out by Novemeber, 2021 as soon as .NET 6 LTS is launched by Microsoft. Preview versions of this project is available for Initial Developer Testing.
+
+### Important Links & Documentations
+
+[Documentation] Overview - [Read](https://fullstackhero.net/dotnet-webapi-boilerplate/general/overview/)
+
+[Documentation] Getting Started - [Read](https://fullstackhero.net/dotnet-webapi-boilerplate/general/getting-started/)
+
+[Documentation] Development Environment - [Learn about setting up the DEV environment](https://fullstackhero.net/dotnet-webapi-boilerplate/general/development-environment/)
+
+Track Progress - [Release 1.0 Milestones](https://github.com/fullstackhero/dotnet-webapi-boilerplate/milestone/1)
+
+Participate in Discussions - [QNA & General Discussions](https://github.com/fullstackhero/dotnet-webapi-boilerplate/discussions)
+
+Join our Discord - [fullstackhero @ Discord](https://discord.gg/gdgHRt4mMw)
+
+## Releases - ASP.NET Core 3.1 Template
 v1.1 - Stable Release - [Download the Stable Release](https://github.com/iammukeshm/CleanArchitecture.WebApi/releases/tag/v1.1) 
 
 v1.0-preview - [Download the first Preview here](https://github.com/iammukeshm/CleanArchitecture.WebApi/releases/tag/v1.0-preview) 
