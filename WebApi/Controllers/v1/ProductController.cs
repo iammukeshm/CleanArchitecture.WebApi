@@ -51,7 +51,8 @@ namespace WebApi.Controllers.v1
             {
                 return BadRequest();
             }
-            return Ok(await Mediator.Send(command));
+            await Mediator.Send(command);
+            return NoContent();
         }
 
         // DELETE api/<controller>/5
@@ -59,7 +60,8 @@ namespace WebApi.Controllers.v1
         [Authorize]
         public async Task<IActionResult> Delete(int id)
         {
-            return Ok(await Mediator.Send(new DeleteProductByIdCommand { Id = id }));
+            await Mediator.Send(new DeleteProductByIdCommand { Id = id })
+            return NoContent();
         }
     }
 }
