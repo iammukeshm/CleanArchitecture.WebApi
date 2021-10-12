@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Repository
 {
-    public class GenericRepositoryAsync<T> : IGenericRepositoryAsync<T> where T : class
+    public class GenericRepositoryAsync<T, TId> : IGenericRepositoryAsync<T,TId> where T : class
     {
         private readonly ApplicationDbContext _dbContext;
 
@@ -18,7 +18,7 @@ namespace Infrastructure.Persistence.Repository
             _dbContext = dbContext;
         }
 
-        public virtual async Task<T> GetByIdAsync(int id)
+        public virtual async Task<T> GetByIdAsync(TId id)
         {
             return await _dbContext.Set<T>().FindAsync(id);
         }
@@ -57,6 +57,15 @@ namespace Infrastructure.Persistence.Repository
             return await _dbContext
                  .Set<T>()
                  .ToListAsync();
+        }
+
+       
+    }
+
+    public class GenericRepositoryAsync<T> : GenericRepositoryAsync<T, int>, IGenericRepositoryAsync<T> where T : class
+    {
+        public GenericRepositoryAsync(ApplicationDbContext dbContext) : base(dbContext)
+        {
         }
     }
 }
