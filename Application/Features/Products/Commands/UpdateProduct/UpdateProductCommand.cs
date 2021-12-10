@@ -1,6 +1,8 @@
 ﻿using Application.Exceptions;
 using Application.Interfaces.Repositories;
 using Application.Wrappers;
+using AutoMapper;
+using Domain.Entities;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -19,9 +21,11 @@ namespace Application.Features.Products.Commands.UpdateProduct
         public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, Response<int>>
         {
             private readonly IProductRepositoryAsync _productRepository;
-            public UpdateProductCommandHandler(IProductRepositoryAsync productRepository)
+            private readonly IMapper _mapper;
+            public UpdateProductCommandHandler(IProductRepositoryAsync productRepository, IMapper mapper)
             {
                 _productRepository = productRepository;
+                _mapper = mapper;
             }
             public async Task<Response<int>> Handle(UpdateProductCommand command, CancellationToken cancellationToken)
             {
@@ -33,9 +37,11 @@ namespace Application.Features.Products.Commands.UpdateProduct
                 }
                 else
                 {
-                    product.Name = command.Name;
-                    product.Rate = command.Rate;
-                    product.Description = command.Description;
+                    //product.Name = command.Name;
+                    //product.Rate = command.Rate;
+                    //product.Description = command.Description;
+
+                    product = _mapper.Map<Product>(command);
                     await _productRepository.UpdateAsync(product);
                     return new Response<int>(product.Id);
                 }
