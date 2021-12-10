@@ -1,4 +1,5 @@
 ﻿using Application.Features.Products.Commands.CreateProduct;
+using Application.Features.Products.Commands.UpdateProduct;
 using Application.Features.Products.Queries.GetAllProducts;
 using AutoMapper;
 using Domain.Entities;
@@ -15,6 +16,7 @@ namespace Application.Mappings
             CreateMap<Product, GetAllProductsViewModel>().ReverseMap();
             CreateMap<CreateProductCommand, Product>();
             CreateMap<GetAllProductsQuery, GetAllProductsParameter>();
+            CreateMap<UpdateProductCommand, Product>();
         }
     }
 }
