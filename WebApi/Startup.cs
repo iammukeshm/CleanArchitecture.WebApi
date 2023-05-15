@@ -15,7 +15,7 @@ namespace WebApi
 {
     public class Startup
     {
-        public IConfiguration _config { get; }
+        private IConfiguration _config { get; }
         public Startup(IConfiguration configuration)
         {
             _config = configuration;
