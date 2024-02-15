@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30002.166
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{0C542137-D103-4825-B636-C4E9D8E7EFC9}"
 EndProject
@@ -14,6 +14,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{79EDE741-1146-4C1F-BE28-82F2709E9C59}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{FE9EA6C6-1E6C-4CBD-886E-4FB321D9A341}"
+	ProjectSection(SolutionItems) = preProject
+		Tests\WebApi.Tests\WebApi.Tests.csproj = Tests\WebApi.Tests\WebApi.Tests.csproj
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D0F0FC8A-3AE2-4676-BA02-6762B286D890}"
 EndProject
