@@ -22,9 +22,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\WebApi\WebApi.csproj" />
-    <ProjectReference Include="..\BaseUnitTesting\BaseUnitTesting\BaseUnitTesting.csproj" />
-  </ItemGroup>
-
 </Project>
