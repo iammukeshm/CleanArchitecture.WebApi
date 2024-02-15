@@ -9,7 +9,9 @@ namespace WebApi.Tests
         [Fact]
         public void Test1()
         {
+            string testStr = "Test";
 
+            Assert.Equal("Test", testStr);
         }
     }
 }
