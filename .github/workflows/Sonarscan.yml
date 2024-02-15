@@ -1,5 +1,4 @@
 name: SonarQube
-
 on:
   push:
     branches:
@@ -7,31 +6,28 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
   workflow_dispatch:
-
+    
 jobs:
   scan:
     name: Scan Solution
     runs-on: ubuntu-latest
-
     steps:
-      - name: Install .NET 6 SDK
+      - name: Install .Net 6 SDK 
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.301'
-
+            dotnet-version: '6.0.301'
       - name: Checkout Source Code
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - name: Cache SonarQube Scanner
+      - name: Cache SonarQube scanner
         id: cache-sonar-scanner
         uses: actions/cache@v3
         with:
           path: ./.sonar/scanner
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
-
+          
       - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
@@ -41,30 +37,15 @@ jobs:
       - name: Install SonarQube Scanner
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         run: mkdir -p ./.sonar/scanner && dotnet tool update dotnet-sonarscanner --tool-path ./.sonar/scanner
-
+        
       - name: Begin SonarQube Scan
-        run: |
-          ./.sonar/scanner/dotnet-sonarscanner begin \
-            /k:"maheshorg04_github" \
-            /o:"maheshorg04" \
-            /d:sonar.login="41d86b097e35f77586397877654c822165cc16f3" \
-            /d:sonar.host.url="https://sonarcloud.io" \
-            /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/coverage.opencover.xml" \
-            /d:sonar.cs.vstest.reportsPaths="**/TestResults/*.trx"
-
+        run: ./.sonar/scanner/dotnet-sonarscanner begin /k:"maheshorg04_github" /o:"maheshorg04" /d:sonar.login="41d86b097e35f77586397877654c822165cc16f3" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/coverage.opencover.xml" -d:sonar.cs.vstest.reportsPaths="**/TestResults/*.trx"
       - name: Restore NuGet Packages
         run: dotnet restore ./CleanArchitecture.WebApi.sln
-
       - name: Build Solution
         run: dotnet build ./CleanArchitecture.WebApi.sln --no-restore
-
       - name: Run Unit Tests
-        run: |
-          dotnet test ./CleanArchitecture.WebApi.sln \
-            --no-build \
-            --logger trx \
-            --collect:"XPlat Code Coverage" \
-            -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
-
+        run: dotnet test ./CleanArchitecture.WebApi.sln --no-build --logger trx --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
       - name: End SonarQube Scan
         run: ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.login="41d86b097e35f77586397877654c822165cc16f3"
+    
