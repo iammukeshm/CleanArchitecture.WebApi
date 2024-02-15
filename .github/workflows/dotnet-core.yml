@@ -48,3 +48,10 @@ jobs:
         run: dotnet test ./CleanArchitecture.WebApi.sln --no-build --logger trx --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
       - name: End SonarQube Scan
         run: ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.login="41d86b097e35f77586397877654c822165cc16f3"
+    
+      - name: Update SonarQube status
+        uses: mikepenz/sonarqube-status-action@v1
+        with:
+          sonar-token: "41d86b097e35f77586397877654c822165cc16f3"
+          sonar-url: "https://sonarcloud.io"
+          pr: ${{ github.event.pull_request.number }}
